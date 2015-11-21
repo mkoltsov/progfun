@@ -18,4 +18,5 @@
 	println(sqrt(2))
 	println(sqrt(4))
 	println(sqrt(1e-6))
+	println(sqrt(1e60))
 //}
