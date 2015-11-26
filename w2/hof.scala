@@ -27,3 +27,14 @@ def sumIntsHOFAnon(a:Int, b:Int) = sum((x)=>x, a,b)
 def sumCubesHOFAnon(a:Int, b:Int) = sum((x)=>x*x*x, a,b)
 println(sumIntsHOF(1,10))
 println(sumCubesHOF(1,10))
+
+def linearSum(f:Int=>Int, a:Int, b:Int) = {
+	def loop(a:Int, acc:Int):Int = 
+	if (a>b) acc
+	else loop(a+1, f(a)+acc)
+	loop(a, 0)
+}
+
+println(linearSum(x=>x,1,10))
+println(linearSum(x=>x*x,1,10))
+println(linearSum(x=>x*x*x,1,10))
