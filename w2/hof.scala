@@ -18,3 +18,12 @@ def sumCubesHOF(a:Int, b:Int) = sum(cubeClos, a,b)
 
 println(sumIntsHOF(1,10))
 println(sumCubesHOF(1,10))
+
+def idAnonClos = (x:Int) => x
+def cubeAnonClos = (x:Int) => x*x*x
+def sum = (x:Int, y:Int) => x+y
+
+def sumIntsHOFAnon(a:Int, b:Int) = sum((x)=>x, a,b)
+def sumCubesHOFAnon(a:Int, b:Int) = sum((x)=>x*x*x, a,b)
+println(sumIntsHOF(1,10))
+println(sumCubesHOF(1,10))
