@@ -1,7 +1,10 @@
 // package progfun
 
 object hello {
-	def main(args: Array[String]) = println("hello")
+	def main(args: Array[String]):Unit = {
+		println("hello")
+		new Some
+	}
 
 	trait SomeTrait {
 		val f = "rrefd"
@@ -10,9 +13,17 @@ object hello {
 
 		def product:Int = chef * pupa
 	}
+	class SomeClass
 
-	class Some extends Any with SomeTrait {
-		pupa = 2
-		println(product)
+	class Some extends SomeClass with SomeTrait {
+		override def chef = 3
+		def pupa = 2
+		println(s"${product} - ${f}")
 	}
 }
+
+// object myClass extends App {
+// 	println("1111")
+// }
+
+// myClass.main(args)
