@@ -1,12 +1,12 @@
-package idealized.scala
+// package idealized.scala
 
-object true extends Boolean {
-	def ifThenElse[T](t: => T, e: => T) = t
-}
+// object True extends Boolean {
+// 	def ifThenElse[T](t: => T, e: => T) = t
+// }
 
-object false extends Boolean {
-	def ifThenElse[T](t: => T, e: => T) = e
-}
+// object False extends Boolean {
+// 	def ifThenElse[T](t: => T, e: => T) = e
+// }
 //Peano numbers
 abstract class Nat {
 	def isZero:Boolean
@@ -24,7 +24,7 @@ object Zero extends Nat {
 }
 
 
-object Succ(n:Nat) extends Nat {
+class Succ(n:Nat) extends Nat {
 	def isZero:Boolean = false
 	def predecessor:Nat = n
 	def + (that:Nat):Nat = new Succ(n + that)
