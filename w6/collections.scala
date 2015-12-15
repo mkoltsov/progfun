@@ -19,7 +19,7 @@ println(1 to 10 by 3)
 
 println(vec.exists(p=>p%111==0))
 println(vec.forall(p=>p%1==0))
-println((Vector("apples", "oranges", "peers") zip Vector("apples", "oranges", "peers", "grapes")).unzip)
+println((Vector("apples", "oranges", "peers") zip Vector("love", "dont love", "hate", "grapes")).unzip)
 
 println(Vector("Hello World", "CHEF","pupa").flatMap(x=>x.split(" ")))
 println(Vector(1,2,3,4).sum)
