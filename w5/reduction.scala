@@ -14,3 +14,6 @@ println(f)
 def concat[T](xs:List[T], ys:List[T]):List[T]= (xs foldRight ys) (_ :: _)
 
 println(concat(List(1,2,3,4), List(7,8,9,0)))
+
+def mapFun[T,U](xs:List[T], f:T=>U):List[U] = (xs foldRight List[U]())(x:T=>f(x))
+def lengthFun[T](xs:List[T]):Int = (xs foldRight 0)(_.length)
