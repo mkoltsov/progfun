@@ -26,3 +26,7 @@ println(Vector(1,2,3,4).sum)
 println(Vector(1,2,3,4).product)
 println(Vector(1,2,3,4).max)
 println(Vector(1,2,3,4).min)
+
+(1 to 1000) flatMap (x:Int=> (1 to 100) map (y=> (x,y)))
+
+def scalarProduct(xs:Vector[Double], ys:Vector[Double]):Double = (xs zip ys).map(xy=> xy._1 * xy._2).sum
